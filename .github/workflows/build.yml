@@ -1,0 +1,12 @@
+﻿name: Test Build Pipeline
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+      - name: Test du pipeline
+        run: echo "✅ Le pipeline fonctionne correctement !"
