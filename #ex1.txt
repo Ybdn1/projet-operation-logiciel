@@ -1,0 +1,53 @@
+#ex1
+1. Auteur du premier et du dernier commit
+Commandes utilisées :
+•	git log -1 --oneline
+git show -s --format="%an <%ae>" HEAD
+Résultat :
+b26f235 (HEAD -> main, origin/main, origin/HEAD) Update to current versions
+Patrick Baumgartner <contact@patbaumgartner.com>
+Dernier commit : Update to current versions
+Auteur : Patrick Baumgartner <contact@patbaumgartner.com>
+Pour le premier commit : git log --reverse --oneline | Select-Object -First 1
+2. Nombre de branches et leur finalité
+Commande utilisée : git branch -a
+Résultat :
+* main
+  remotes/origin/3310
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/efficient-webjars
+  remotes/origin/gh-pages
+  remotes/origin/hacking/mysql
+  remotes/origin/main
+  remotes/origin/spring-ai
+  remotes/origin/springboot3
+  remotes/origin/wavefront
+Nombre total de branches distantes : 9
+Branche principale : main
+Finalités :
+- main → branche stable du projet
+- gh-pages → déploiement de la documentation sur GitHub Pages
+- springboot3, spring-ai → développement de nouvelles versions ou fonctionnalités
+- efficient-webjars, wavefront, hacking/mysql → branches techniques ou expérimentales
+- 3310 → branche issue d’un ticket ou correctif spécifique
+3. Principaux contributeurs
+Commande utilisée : git shortlog -sn
+Résultat :
+   210  Mic
+   156  Dave Syer
+   142  Antoine Rey
+Principaux contributeurs :
+1. Mic (210 commits)
+2. Dave Syer (156 commits)
+3. Antoine Rey (142 commits)
+4. Tags existants et leur signification
+Commande utilisée : git tag
+Résultat : 1.5.x
+Nombre de tags : 1
+Signification : le tag 1.5.x correspond à une version stable majeure 1.5 du projet.
+5. Intégration continue (CI/CD)
+Commande utilisée (sous PowerShell) : dir -Force | Select-String -Pattern ".github", ".travis", ".gitlab", "Jenkinsfile"
+Aucun fichier de configuration trouvé (.github, .gitlab-ci.yml, Jenkinsfile, etc.)
+Conclusion : le dépôt n’est pas relié à un système d’intégration continue.
+
+#fin ex2
